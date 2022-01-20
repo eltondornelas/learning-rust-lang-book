@@ -24,7 +24,7 @@ impl<T> Deref for MyBox<T> {
     }
 }
 
-pub fn mybox_deref_main() {
+pub fn box_deref_main() {
     let b = Box::new(5);
     println!("b = {}", b);
 
