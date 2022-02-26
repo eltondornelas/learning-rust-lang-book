@@ -10,6 +10,7 @@ fn main() {
     let listener = TcpListener::bind("127.0.0.1:7878").unwrap();
     let pool = ThreadPool::new(4);
 
+    // for stream in listener.incoming().take(2) {  // the .take(2) is to see the graceful shutdown
     for stream in listener.incoming() {
         let stream = stream.unwrap();
 
